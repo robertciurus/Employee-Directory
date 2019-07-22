@@ -1,0 +1,99 @@
+body {
+  font-family: 'Quicksand', sans-serif;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2em;
+  margin-left:1em;
+  margin-right:1em;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  border: 3px solid lightgrey;
+  border-radius: 5px;
+  padding: 0.5em;
+}
+
+.card:hover {
+  border: 3px solid grey;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.avatar {
+  border-radius: 50%;
+  width:120px;
+  height:120px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 15px
+}
+
+.hidden {
+  display: none;
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+}
+
+.modal-content {
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  max-width: 50%;
+  min-width: 35%;
+  margin: 15% auto auto;
+  text-align: center;
+  background: white;
+  padding: 1em;
+}
+
+.modal-close {
+  display: flex;
+  margin-left: auto;
+  border-radius: 1px;
+  border: solid 0.5px black;
+  background: white;
+  cursor: pointer;
+}
+
+.avatar {
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-right: auto;
+}
+
+.text-container {
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 4em;
+  }
+}
